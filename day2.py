@@ -16,8 +16,6 @@ def intcode(input_dat, noun=12, verb=2):
         x_pos, y_pos = dat[pos+1:pos+3]
         output_pos = dat[pos+3]
 
-        # print(dat,output_pos)
-
         if dat[pos] == 1:
             # add 
             dat[output_pos] = dat[x_pos] + dat[y_pos]
@@ -43,7 +41,6 @@ def find_inputs(dat, target=19690720):
             if output == target:
                 return noun, verb
             
-
 
 if __name__ == "__main__":
 
