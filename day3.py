@@ -106,27 +106,23 @@ def find_minimal_delay_intersect(input_file):
                 for x in range(pos[0]+1, new_pos[0]+1):
                     steps += 1
                     if x != 0 and pos[1] != 0 and (x,pos[1]) in path:
-                        print((x,pos[1]), path[(x,pos[1])], steps)
                         min_steps = min(path[(x,pos[1])] + steps, min_steps)
             elif move[0] == 'L':
                 for x in range(pos[0]-1, new_pos[0]-1, -1):
                     steps += 1
                     if x != 0 and pos[1] != 0 and (x,pos[1]) in path:
-                        print((x,pos[1]), path[(x,pos[1])], steps)
                         min_steps = min(path[(x,pos[1])] + steps, min_steps)
 
             elif move[0] == 'U':
                 for y in range(pos[1]+1,new_pos[1]+1):
                     steps += 1
                     if pos[0] != 0 and y != 0 and (pos[0],y) in path:
-                        print((pos[0],y), path[(pos[0],y)], steps)
                         min_steps = min(path[(pos[0],y)] + steps, min_steps)
 
             else:
                 for y in range(pos[1]-1,new_pos[1]-1,-1):
                     steps += 1
                     if pos[0] != 0 and y != 0 and (pos[0],y) in path:
-                        print((pos[0],y), path[(pos[0],y)], steps)
                         min_steps = min(path[(pos[0],y)] + steps, min_steps)
             pos = new_pos
 
