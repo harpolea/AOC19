@@ -133,16 +133,11 @@ if __name__ == "__main__":
 
     dat = np.loadtxt(sys.argv[1], ndmin=1, delimiter=',', dtype=np.int)
     
-    # part1 = int_code(dat)
+    part1 = int_code(dat)
 
-    # print(f'Part 1 = {part1[-1]}')
+    print(f'Part 1 = {part1[-1]}')
     
     part2 = int_code2(dat)
 
     print(f'Part 2 = {part2[-1]}')
-
-    # noun, verb = find_inputs(dat)
-
-    # print(f'Part 2, product = {100 * noun + verb}')
-
 
