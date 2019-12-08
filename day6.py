@@ -58,7 +58,6 @@ def orbit_transfers(orbits):
             continue
 
 
-
 if __name__ == "__main__":
 
     orbits = count_orbits(sys.argv[1])
