@@ -42,7 +42,6 @@ def vaporise_them_all(asteroids, station):
             x, y = a[0], a[1]
             z = complex(-(a[1] - station[1]) , a[0] - station[0])
             r, phi = cmath.polar(z)
-            # phi *= -1 
 
             if phi < 0:
                 phi = np.pi * 2 + phi
@@ -82,8 +81,6 @@ def vaporise_them_all(asteroids, station):
 
     return 100 * x + y
 
-    
-
 
 if __name__ == "__main__":
 
@@ -97,12 +94,3 @@ if __name__ == "__main__":
         output = vaporise_them_all(asteroids, best_loc)
 
         print(f'Part 2 = {output}')
-
-
-    # station = (11, 13)
-    # a = (11, 12)
-
-    # z = complex(- (a[1] - station[1]), a[0] - station[0])
-    # r, phi = cmath.polar(z)
-
-    # print(r, phi)
